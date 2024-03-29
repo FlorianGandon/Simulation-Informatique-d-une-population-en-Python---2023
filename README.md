@@ -1,5 +1,5 @@
 # Simulation-Informatique-d-une-population-en-Python---2023
-Ceci est un de mes premiers programmes informatiques pour simuler l'évolution d'individue
+Ceci est un de mes premiers programmes informatiques pour simuler d'une population
 
 ## Documentation
 Mon objectif est de créer mon portfolio, pour cela je récupère mes premiers programmes.
