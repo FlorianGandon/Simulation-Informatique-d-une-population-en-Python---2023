@@ -12,6 +12,14 @@ Par exemple :
 * Le manque d'optimisation
 * ...
 
+<br/>
+Le menus n'a jamais été fini mais il est quand même accécible avec la touche Ctrl.
+<br/>
+Le bouton tout à droite permet de changer le temps.
+<br/>
+Celui au centre permet de supprimer un élément.
+<br/>
+Celui àgauche permet d'ajouter un élément.
 
 ## Installation
 
