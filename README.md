@@ -5,3 +5,5 @@ Ceci est un de mes premiers programmes informatiques pour simuler l'évolution d
 Liste des bibliothèques python et comment les installer :
 pygame : pip install pygame
 noise : pip install noise
+pip install wheel
+il faut aussi  Microsoft Visual C++ 14.0 or greater

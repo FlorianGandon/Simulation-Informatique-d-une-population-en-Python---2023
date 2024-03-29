@@ -11,22 +11,15 @@ MarginMenu = 15
 MarginButton = 10
 
 
-# Image Menu
-ImageSuprimerDesactiver = '../Image Simulateur/Menu Image/trash vide.png'
-ImageSuprimerActiver = '../Image Simulateur/Menu Image/trash.png'
-ImageTempsNormal = '../Image Simulateur/Menu Image/play.png'
-ImageTempsRalentie = '../Image Simulateur/Menu Image/angle-right.png'
-ImageTempsArrete = '../Image Simulateur/Menu Image/pause.png'
-ImageRienAjouter = '../Image Simulateur/Menu Image/cross.png'
 # Nombre entitées:
-NombreHomme = 50
-NombreFemme = 100
-NombreArbre = 25
+NombreHomme = 75
+NombreFemme = 75
+NombreArbre = 75
 NombreOurs = 0
 
 # Paramètre arbre:
-ImageArbre = '../Image Simulateur/tree.png'
-ImageArbreAvecPomme = '../Image Simulateur/apple-tree.png'
+ImageArbre = 'Image Simulateur/tree.png'
+ImageArbreAvecPomme = 'Image Simulateur/apple-tree.png'
 TailleArbre = (35, 35)
 FrequenceApparitionPomme = 650
 Nouriture = 1000
@@ -48,14 +41,14 @@ FormulePerteNouriture = 'self.speed*1.25 + (self.vision/75)'
 
 
 # Paramètre Homme:
-ImageHomme = '../Image Simulateur/man.png'
+ImageHomme = 'Image Simulateur/man.png'
 
 # Paramètre Femme:
-ImageFemme = '../Image Simulateur/female.png'
+ImageFemme = 'Image Simulateur/female.png'
 TempsGestation = 120 #120
 
 # Paramètre ours:
-ImageOurs = '../Image Simulateur/bear.png'
+ImageOurs = 'Image Simulateur/bear.png'
 TailleOurs = (40,40)
 VieOurs = 800
 IntervalleVitesseOurs = (1,8)
@@ -68,6 +61,3 @@ DegatsOurs = 100
 mapvide = [533, 546, 565, 579, 602, 622, 623, 645, 660, 663, 673, 675, 684, 717, 734, 744, 746, 750, 751, 763, 779, 799, 864, 867, 876, 891, 893, 922, 924, 926, 929, 933, 979, 986]
 mappresquevide = [612]
 
-"""
-mapvide.sort()
-print(mapvide)"""

@@ -8,7 +8,10 @@ import map
 
 class Monde:
     def __init__(self):
-        map.creerMap()
+        try:
+            map.creerMap()
+        except:
+            print("Le monde ne c'est pas générer de manière aléatoire")
         self.Fenetre = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.display.set_caption('Simulateur')
         self.EnCours = True
@@ -161,9 +164,6 @@ class Monde:
 
                     
 pygame.init()
-
-
-
 game = Monde()
 game.run()
 pygame.quit()

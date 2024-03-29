@@ -1,0 +1,146 @@
+@startuml
+
+class Monde {
+Fenetre: Surface
+EnCours: Boolean
+Horloge: Clock
+tours: Int
+
+NouveauOurs(self, co=None)
+NouveauArbre(self, co = None)
+NouveauHomme(self)
+NouvelleFemme(self)
+hangling_event(self)
+update(self)
+displayFenetre(self)
+display(self)
+fin(self)
+run(self)
+}
+
+class pygame.sprite.Sprite
+
+class Humain {
+type: String
+vie: Int
+age: Int
+Nouriture: Int
+maxNouriture
+vision: Int
+speed: Int
+ViseImportant: Boolean
+Image: Surface
+Rect: Rect
+objectif: [2]Int{}
+Active : Boolean
+
+<<create>>(apparence: String, sexe: String, coordonne: (Int, Int) = None, vision: Int =None, speed: Int =None)
+draw(self, screen)
+co(self): (Int, Int)
+info(self): String
+choisirObjectif(self, ListeElement)
+avancer(self)
+check_click(self, bool)
+ChangerValeurs(self, ListeElement, ListeHumain)
+update(self, ListeElement, ListeHumain)
+hurt(self, degat)
+}
+
+class Homme {
+dispo: Boolean
+
+<<create>>(coordonne : (Int, Int) = None, vision: Int =None, speed: Int = None)
+Dispo(self)
+interaction(self)
+}
+
+class Femme {
+dispo: Boolean
+
+<<create>>(coordonne : (Int, Int) = None, vision: Int =None, speed: Int = None)
+Dispo(self)
+interaction(self)
+gestationEnCours(self, ListeElement, ListeHumain, vision=None)
+}
+
+class Arbre {
+type: String
+Image: Surface
+Rect: Rect
+Pomme: Boolean
+Active: Boolean
+
+<<create>>(coordonne: (Int, Int) =None)
+draw(self, screen)
+modifier(self)
+co(self): (Int, Int)
+interaction(self)
+check_click(self, bool)
+}
+
+class Ours {
+type: String
+vie: Int
+age: Int
+speed: Int
+vision: Int
+Image: Surface
+Rect: Rect
+objectif: (Int, Int)
+Active: Boolean
+
+<<create>>(coordonne: (Int, Int) =None)
+draw(self, screen)
+co(self) : (Int, Int)
+ChoisirObjectif(self, ListeHumains)
+avancer(self)
+update(self, ListeHumains)
+hurt(self, degat)
+info(self)
+check_click(self, bool)
+}
+
+class Menu {
+display_surface: Surface
+ZoneMenu: Rect
+RectBoutonAjouter: Rect
+RectBoutonSuprimer: Rect
+RectBoutonTemps: Rect
+
+
+draw_all(self, screen)
+update(self)
+}
+
+Menu "1" --> "3\nBoutonAjouter\nBoutonSuprimer\nBoutonTemps" BoutonMEtat : "appartient à" <
+
+class BoutonMEtat {
+Bouton: Rect
+Image: Surface
+Couleur: String
+Borne: (Int, Int)
+Active: Int
+Etats: List<Int>()
+t: Boolean
+
+<<create>>(position, taille, Borne=(0,2), Etats=('#ffffff', '#000000', '#7f7f7f'))
+check_click(self)
+draw(self, screen)
+ disable(self)
+}
+
+Humain --|> pygame.sprite.Sprite
+Arbre --|> pygame.sprite.Sprite
+Ours --|> pygame.sprite.Sprite
+BoutonMEtat --|> pygame.sprite.Sprite
+
+Homme -up-|> Humain
+Femme -up-|> Humain
+
+Monde "1" ---> "0..* \n Humains: Group[_SpriteSupportsGroup]" Humain : "appartient à" <
+Monde "1" ---> "0..* \n ListElement: Group[_SpriteSupportsGroup]" pygame.sprite.Sprite : "appartient à" <
+Monde "1" ---> "0..* \n Arbres: Group[_SpriteSupportsGroup]" Arbre : "appartient à" <
+Monde "1" ---> "0..* \n Ours: Group[_SpriteSupportsGroup]" Ours : "appartient à" <
+
+Monde "1" ---> "1\n menu" Menu : "appartient à" <
+@enduml
